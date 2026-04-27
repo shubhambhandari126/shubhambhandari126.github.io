@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubham Bhandari</title>
+<meta name="description" content="Shubham Bhandari — Head of Ecosystem at Humanity Protocol. Web3 growth operator. Angel investor.">
+<meta property="og:title" content="Shubham Bhandari">
+<meta property="og:description" content="Head of Ecosystem at Humanity Protocol. Web3 growth operator. Angel investor.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👋%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --bg-elev: #ffffff;
+    --fg: #0f0f10;
+    --muted: #6e6e76;
+    --subtle: #a3a3a8;
+    --accent: #5b5fff;
+    --accent-soft: rgba(91, 95, 255, 0.08);
+    --rule: #ececec;
+    --green: #3fb950;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0b;
+      --bg-elev: #131316;
+      --fg: #ededee;
+      --muted: #8a8a93;
+      --subtle: #5a5a63;
+      --accent: #8c8fff;
+      --accent-soft: rgba(140, 143, 255, 0.12);
+      --rule: #232328;
+      --green: #4fc960;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background-image:
+      radial-gradient(ellipse 700px 400px at 50% -10%, var(--accent-soft), transparent 60%);
+    background-repeat: no-repeat;
+  }
+  ::selection { background: var(--accent); color: #fff; }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 72px 24px 120px;
+    animation: fadeIn 0.6s ease-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+  .avatar-wrap {
+    position: relative;
+    flex-shrink: 0;
+  }
+  .avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: linear-gradient(135deg, #ff8a65, #6a5acd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 0.5px;
+    user-select: none;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  }
+  img.avatar { display: block; }
+  .status-dot {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--green);
+    border: 3px solid var(--bg);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(63, 185, 80, 0); }
+  }
+  .header-text h1 {
+    font-size: 26px;
+    margin: 0 0 2px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    color: var(--muted);
+    margin: 0;
+    font-size: 15px;
+  }
+  .tagline .accent {
+    color: var(--fg);
+  }
+
+  .lede {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: 28px;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin: 8px 0 20px;
+    font-weight: 400;
+  }
+  .lede em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  p { margin: 0 0 16px; }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.18s ease, color 0.18s ease;
+  }
+  a:hover { border-bottom-color: currentColor; }
+
+  h2 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--subtle);
+    font-weight: 600;
+    margin: 56px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  /* Work list */
+  .work { list-style: none; padding: 0; margin: 0; }
+  .work li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    transition: padding-left 0.18s ease;
+  }
+  .work li:last-child { border-bottom: none; }
+  .work li:hover { padding-left: 6px; }
+  .role .title {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .role .company {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 1px;
+  }
+  .date {
+    color: var(--subtle);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    font-size: 13px;
+    padding-top: 3px;
+  }
+  .role .title .pill {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 1px 7px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    vertical-align: 2px;
+  }
+
+  /* Projects */
+  .projects { list-style: none; padding: 0; margin: 0; }
+  .projects li {
+    padding: 16px 18px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    background: var(--bg-elev);
+    transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .projects li:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  }
+  .projects .name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .projects .name::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .projects .desc {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 13px;
+    display: flex;
+    gap: 6px 22px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  footer a {
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  footer a:hover { color: var(--fg); }
+  footer a .arr {
+    font-size: 10px;
+    opacity: 0.5;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+  }
+  footer a:hover .arr {
+    transform: translate(2px, -2px);
+    opacity: 1;
+  }
+  .copy {
+    margin-left: auto;
+    color: var(--subtle);
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    main { padding: 48px 20px 100px; }
+    .lede { font-size: 24px; }
+    .header-text h1 { font-size: 22px; }
+    .copy { width: 100%; margin-left: 0; margin-top: 8px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="header">
+    <div class="avatar-wrap">
+      <img class="avatar" src="avatar.jpg" alt="Shubham Bhandari" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'avatar',textContent:'SB','aria-label':'Shubham Bhandari'}))">
+      <span class="status-dot" title="Available for chats"></span>
+    </div>
+    <div class="header-text">
+      <h1>Shubham Bhandari</h1>
+      <p class="tagline">Head of Ecosystem · <span class="accent">Humanity Protocol</span></p>
+    </div>
+  </div>
+
+  <p class="lede">Web3 growth operator. <em>AI-curious.</em></p>
+
+  <p>Currently leading ecosystem at <a href="https://humanity.org">Humanity Protocol</a> — building the rails for verifiable human identity in an AI-saturated world.</p>
+
+  <p>Previously <a href="https://manta.network">Manta Network</a>, where my team shipped 200+ dApps. Angel in 13+ projects. In crypto since 2020.</p>
+
+  <h2>Work</h2>
+  <ul class="work">
+    <li>
+      <div class="role">
+        <div class="title">Head of Ecosystem <span class="pill">now</span></div>
+        <div class="company">Humanity Protocol</div>
+      </div>
+      <div class="date">2026 — present</div>
+    </li>
+    <li>
+      <div class="role">
+        <div class="title">Head of Ecosystem</div>
+        <div class="company">Manta Network</div>
+      </div>
+      <div class="date">2023 — 2026</div>
+    </li>
+    <li>
+      <div class="role">
+        <div class="title">Head of Gaming</div>
+        <div class="company">Mantle Network</div>
+      </div>
+      <div class="date">2022 — 2023</div>
+    </li>
+    <li>
+      <div class="role">
+        <div class="title">Head of BD</div>
+        <div class="company">SonicSVM</div>
+      </div>
+      <div class="date">2021 — 2022</div>
+    </li>
+    <li>
+      <div class="role">
+        <div class="title">Ecosystem Research</div>
+        <div class="company">Polygon Labs</div>
+      </div>
+      <div class="date">2021</div>
+    </li>
+  </ul>
+
+  <h2>Projects</h2>
+  <ul class="projects">
+    <li>
+      <div class="name">Cognito</div>
+      <div class="desc">An AI agent marketplace.</div>
+    </li>
+    <li>
+      <div class="name">ShubhAIm</div>
+      <div class="desc">My virtual assistant — works for me while I'm out.</div>
+    </li>
+    <li>
+      <div class="name">AI Suite</div>
+      <div class="desc">Five AI agents handling task automation, social-media scraping, lead follow-ups, and internal team management.</div>
+    </li>
+  </ul>
+
+  <footer>
+    <a href="mailto:shubhambhandari126@gmail.com">Email <span class="arr">↗</span></a>
+    <a href="https://x.com/Shubhamb" target="_blank" rel="noopener">X <span class="arr">↗</span></a>
+    <a href="https://www.linkedin.com/in/shubham-bhandari-b397041a1/" target="_blank" rel="noopener">LinkedIn <span class="arr">↗</span></a>
+    <a href="https://t.me/shubhamb1905" target="_blank" rel="noopener">Telegram <span class="arr">↗</span></a>
+    <span class="copy">© Shubham</span>
+  </footer>
+</main>
+</body>
+</html>
