@@ -399,7 +399,7 @@
   /* ─── Stats ─── */
   .stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 24px;
     row-gap: 28px;
     margin-top: 80px;
@@ -502,6 +502,29 @@
     color: var(--ink-dim);
     font-size: 14px;
   }
+  .job-points {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 6px;
+  }
+  .job-points li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-mute);
+  }
+  .job-points li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+  }
+  .job-points strong { color: var(--ink-dim); font-weight: 600; }
   .job-date {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
@@ -635,6 +658,13 @@
   }
 
   /* ─── Tech Stack / Skills ─── */
+  .stack-intro {
+    color: var(--ink-dim);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 540px;
+    margin: 14px 0 4px;
+  }
   .tech-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -1060,7 +1090,9 @@
           <a href="https://humanity.org" target="_blank" rel="noopener">Humanity Protocol</a>,
           building the rails for verifiable human identity in an AI-saturated world.
           Previously <a href="https://manta.network" target="_blank" rel="noopener">Manta Network</a>,
-          where my team supported 200+ dApps. Angel in 13+ projects. In crypto since 2020.
+          where my team supported 250+ dApps. Angel in 13+ projects. In crypto since 2020.
+          Right now I'm deep in payment rails, building a neobank from scratch, and studying
+          <em>biotech AI</em> on the side.
         </p>
         <div class="hero-cta reveal">
           <a href="#contact" class="btn btn-primary">Let's talk <span class="arrow">→</span></a>
@@ -1081,7 +1113,7 @@
             <div><span class="t-prompt">$</span>whoami</div>
             <div class="t-out">head_of_ecosystem // humanity_protocol</div>
             <div><span class="t-prompt">$</span>dapps --supported</div>
-            <div class="t-out"><span class="ok">200+</span> shipped ✓</div>
+            <div class="t-out"><span class="ok">250+</span> (across 3 ecosystems) ✓</div>
             <div><span class="t-prompt">$</span>angel --portfolio</div>
             <div class="t-out"><span class="ok">13+</span> checks deployed</div>
             <div><span class="t-prompt">$</span>status<span class="caret"></span></div>
@@ -1093,8 +1125,8 @@
             <span class="dot"></span>
             <span>currently</span>
           </div>
-          <div class="row"><span class="k">building</span><span class="v accent">neobank · identity · AI employees</span></div>
-          <div class="row"><span class="k">reading</span><span class="v">State of AI</span></div>
+          <div class="row"><span class="k">building</span><span class="v accent">neobank · identity · AI employees · bio AI</span></div>
+          <div class="row"><span class="k">reading</span><span class="v">Implementations of AI in DNA, RNA &amp; Protein</span></div>
           <div class="row"><span class="k">based in</span><span class="v">Dubai, UAE</span></div>
           <div class="row"><span class="k">status</span><span class="v">shipping daily</span></div>
         </div>
@@ -1103,8 +1135,16 @@
 
     <div class="stats reveal">
       <div class="stat">
-        <div class="stat-num" data-target="200" data-suffix="+">0</div>
-        <div class="stat-label">dApps supported</div>
+        <div class="stat-num" data-target="250" data-suffix="+">0</div>
+        <div class="stat-label">dApps supported · across 3 ecosystems</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="50" data-prefix="$" data-suffix="M">0</div>
+        <div class="stat-label">fund managed · Manta</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="40" data-prefix="$" data-suffix="M">0</div>
+        <div class="stat-label">seed raised · SonicSVM</div>
       </div>
       <div class="stat">
         <div class="stat-num" data-target="13" data-suffix="+">0</div>
@@ -1123,7 +1163,7 @@
 
   <!-- MARQUEE -->
   <section class="marquee-section">
-    <div class="marquee-label">Projects I support</div>
+    <div class="marquee-label">Projects I advise</div>
     <div class="marquee">
       <span class="marquee-item">Epoch Protocol</span>
       <span class="marquee-item">SoonSVM</span>
@@ -1132,6 +1172,8 @@
       <span class="marquee-item">Junk.fun</span>
       <span class="marquee-item">Superfortune</span>
       <span class="marquee-item">FireFly</span>
+      <span class="marquee-item">trdEverything</span>
+      <span class="marquee-item">Hi.com</span>
       <span class="marquee-item">Epoch Protocol</span>
       <span class="marquee-item">SoonSVM</span>
       <span class="marquee-item">Thema Financial</span>
@@ -1139,6 +1181,8 @@
       <span class="marquee-item">Junk.fun</span>
       <span class="marquee-item">Superfortune</span>
       <span class="marquee-item">FireFly</span>
+      <span class="marquee-item">trdEverything</span>
+      <span class="marquee-item">Hi.com</span>
     </div>
   </section>
 
@@ -1160,7 +1204,14 @@
       <div class="job">
         <div>
           <div class="job-title">Head of Ecosystem</div>
-          <div class="job-company">Manta Network · supported 200+ dApps</div>
+          <div class="job-company">Manta Network · supported 250+ dApps</div>
+          <ul class="job-points">
+            <li>Core decision maker on a <strong>$50M ecosystem fund</strong> — grants, funding, liquidity, and dev support.</li>
+            <li>Grants to 12 projects drove <strong>429M TVL</strong> and <strong>210k new wallets</strong>.</li>
+            <li>Helped launch the token on <strong>Binance, Bybit & Upbit</strong>; ran market maker and analytics integrations.</li>
+            <li>Incubated 5 products with Polygon &amp; Celestia; partners including Stargate, LayerZero &amp; Caldera.</li>
+            <li><strong>50+ keynotes &amp; panels</strong> — EthDenver, EthCC, Devcon, Token2049.</li>
+          </ul>
         </div>
         <div class="job-date">2023 → 2026</div>
       </div>
@@ -1168,6 +1219,11 @@
         <div>
           <div class="job-title">Head of Gaming</div>
           <div class="job-company">Mantle Network</div>
+          <ul class="job-points">
+            <li>Led <strong>172+ partnership discussions</strong> across gaming, DeAI, marketplaces &amp; infra.</li>
+            <li>Launched <strong>63 games on testnet, 11 on mainnet</strong> (Off The Grid, Big Time).</li>
+            <li>Ran the EcoFund with Mirana Ventures; partners including Magic Eden, Ondo &amp; Graph Protocol.</li>
+          </ul>
         </div>
         <div class="job-date">2022 → 2023</div>
       </div>
@@ -1175,6 +1231,11 @@
         <div>
           <div class="job-title">Head of BD</div>
           <div class="job-company">SonicSVM</div>
+          <ul class="job-points">
+            <li>Secured a <strong>$40M seed round</strong> — OKX, Galaxy Interactive &amp; Republic Crypto.</li>
+            <li>Drove <strong>$4.2M in NFT sales</strong> to guilds (YGG, IndiGG, Merit Circle).</li>
+            <li>Built partnerships with <strong>80+ KOLs</strong> across APAC.</li>
+          </ul>
         </div>
         <div class="job-date">2021 → 2022</div>
       </div>
@@ -1182,6 +1243,10 @@
         <div>
           <div class="job-title">Ecosystem Research</div>
           <div class="job-company">Polygon Labs</div>
+          <ul class="job-points">
+            <li>Authored research with the DeFi team (AAVE, Uniswap V3).</li>
+            <li>Covered 12 top-tier projects — Quickswap, Decentraland, MINA, Miden.</li>
+          </ul>
         </div>
         <div class="job-date">2021</div>
       </div>
@@ -1222,21 +1287,23 @@
     <div class="sec-num" aria-hidden="true">03</div>
     <div class="reveal">
       <div class="eyebrow">03 / Operating System</div>
-      <h2 class="section-title">How I work.</h2>
+      <h2 class="section-title">How I work. <em>AI-first.</em></h2>
+      <p class="stack-intro">I run my desk like a product team — a stack of AI agents handles the repetitive
+        work so I can stay on strategy, partnerships, and the next bet.</p>
     </div>
     <div class="tech-grid reveal">
+      <div class="tech-pill"><span class="ico">→</span>AI agent orchestration</div>
+      <div class="tech-pill"><span class="ico">→</span>Workflow automation</div>
+      <div class="tech-pill"><span class="ico">→</span>LLM-powered ops</div>
+      <div class="tech-pill"><span class="ico">→</span>Automated lead follow-ups</div>
+      <div class="tech-pill"><span class="ico">→</span>Social scraping &amp; signals</div>
+      <div class="tech-pill"><span class="ico">→</span>Internal AI tooling</div>
+      <div class="tech-pill"><span class="ico">→</span>Prompt &amp; agent design</div>
       <div class="tech-pill"><span class="ico">→</span>Ecosystem strategy</div>
-      <div class="tech-pill"><span class="ico">→</span>Token design</div>
-      <div class="tech-pill"><span class="ico">→</span>Go-to-market</div>
-      <div class="tech-pill"><span class="ico">→</span>Developer relations</div>
+      <div class="tech-pill"><span class="ico">→</span>Token design &amp; GTM</div>
       <div class="tech-pill"><span class="ico">→</span>Grant programs</div>
-      <div class="tech-pill"><span class="ico">→</span>L1 / L2 scaling</div>
-      <div class="tech-pill"><span class="ico">→</span>Identity & ZK</div>
-      <div class="tech-pill"><span class="ico">→</span>AI agent design</div>
+      <div class="tech-pill"><span class="ico">→</span>Identity &amp; ZK</div>
       <div class="tech-pill"><span class="ico">→</span>Angel investing</div>
-      <div class="tech-pill"><span class="ico">→</span>Founder coaching</div>
-      <div class="tech-pill"><span class="ico">→</span>Community ops</div>
-      <div class="tech-pill"><span class="ico">→</span>Partnerships</div>
     </div>
   </section>
 
@@ -1303,6 +1370,7 @@
         const el = e.target;
         const target = +el.dataset.target;
         const suffix = el.dataset.suffix || '';
+        const prefix = el.dataset.prefix || '';
         const raw = el.dataset.raw === 'true';
         const duration = 1200;
         const start = performance.now();
@@ -1310,9 +1378,9 @@
           const p = Math.min((now - start) / duration, 1);
           const eased = 1 - Math.pow(1 - p, 3);
           const cur = Math.floor(eased * target);
-          el.textContent = (raw ? target : cur) + (p === 1 ? suffix : '');
+          el.textContent = prefix + (raw ? target : cur) + (p === 1 ? suffix : '');
           if (p < 1) requestAnimationFrame(tick);
-          else el.textContent = target + suffix;
+          else el.textContent = prefix + target + suffix;
         }
         requestAnimationFrame(tick);
         statObserver.unobserve(el);
